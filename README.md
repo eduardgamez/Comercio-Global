@@ -8,16 +8,14 @@ Este proyecto es una plataforma de análisis interactivo diseñada para procesar
 - **Optimizado**: Configuración específica para hardware moderno (aprovecha múltiples hilos y memoria RAM).
 
 ## 🛠️ Instalación y Configuración (Windows)
-1. Clona el repositorio.
-2. Asegúrate de tener Python 3.11+ instalado.
-3. Ejecuta el script de configuración automática:
+1. **Clona** el repositorio.
+2. **Prepara los datos**: Copia tus archivos CSV de BACI en la carpeta `data/`.
+3. **Configura el entorno**: Ejecuta el script de automatización en PowerShell:
    ```powershell
    .\setup.ps1
    ```
-
-## 📁 Estructura de Datos
-Para que el script funcione, debes colocar los archivos CSV de BACI en la carpeta `data/`. 
-*(Nota: La carpeta `data/` y el entorno `.venv/` están excluidos del repositorio para mantenerlo ligero).*
+   *(Este script creará el entorno virtual e instalará las librerías necesarias).*
+4. **¡Listo!**: El script te preguntará si quieres ejecutar el análisis al finalizar.
 
 ## 📈 Uso
 Ejecuta el script principal:
