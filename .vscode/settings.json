@@ -1,0 +1,6 @@
+{
+    "python.defaultInterpreterPath": "c:\\Users\\User\\Desktop\\VSCodee\\VSCodee-1\\Comercio-Global\\.venv\\Scripts\\python.exe",
+    "python.analysis.extraPaths": [
+        "c:\\Users\\User\\Desktop\\VSCodee\\VSCodee-1\\Comercio-Global\\.venv\\Lib\\site-packages"
+    ]
+}
