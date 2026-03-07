@@ -26,3 +26,4 @@ Esto generará un archivo `vista_comercio.html` con las visualizaciones actualiz
 
 ---
 *Desarrollado para análisis avanzado de economía internacional.*
+---
