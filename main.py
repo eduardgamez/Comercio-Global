@@ -1,7 +1,9 @@
-import pandas as pd
+import pandas as pd  # type: ignore
+import pyarrow  # type: ignore
 import glob
 import os
-import plotly.express as px
+import re
+import plotly.express as px  # type: ignore
 
 def load_all_years(data_dir='data', cache_file='data/cache_comercio.parquet'):
     """
@@ -22,8 +24,13 @@ def load_all_years(data_dir='data', cache_file='data/cache_comercio.parquet'):
     print("Iniciando carga inicial de CSVs...")
     for file_path in files:
         file_name = os.path.basename(file_path)
-        year = file_name.split('_Y')[1][:4]
-        print(f"-> Procesando año {year}...")
+        match = re.search(r'_Y(\d{4})', file_name)
+        if match:
+            year = match.group(1)
+            print(f"-> Procesando año {year}...")
+        else:
+            print(f"-> Saltando archivo con formato inesperado: {file_name}")
+            continue
         df = pd.read_csv(file_path, dtype={
             't': 'int16', 'i': 'int16', 'j': 'int16', 
             'k': 'int32', 'v': 'float32', 'q': 'float32'
