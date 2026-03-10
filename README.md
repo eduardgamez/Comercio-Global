@@ -24,5 +24,21 @@ Ejecuta el script principal:
 ```
 Esto generará un archivo `vista_comercio.html` con las visualizaciones actualizadas.
 
+## 🐍 Snake (mini-juego)
+Este repo también incluye una implementación mínima de **Snake** (sin dependencias extra) para ejecutar en terminal.
+
+### Ejecutar Snake
+Desde la raíz del proyecto:
+```bash
+python3 -m src.snake.cli
+```
+
+Controles: flechas o WASD, `Space`/`P` para pausar, `R` reinicia, `Q` sale.
+
+### Tests (lógica de Snake)
+```bash
+python3 -m unittest discover -s tests
+```
+
 ---
 *Desarrollado para análisis avanzado de economía internacional.*
